@@ -1,0 +1,9 @@
+Добавление
+curl -X POST -H 'Content-Type: application/json' -d '{"song": "Happy New Year", "artist": "ABBA"}' http://127.0.0.1:8000/add_music/
+
+Удаление
+curl -X 'DELETE' http://127.0.0.1:8000/delete_music/0 - не работает
+Invoke-RestMethod -Uri 'http://127.0.0.1:8000/delete_music/1' -Method Delete - Работает
+
+Обновление
+curl -X PUT -H "Content-Type: application/json" -d '[{"song": "Happy New Year", "artist": "ABBA"}, {"song": "Царица", "artist": "Anna Asti"}]' http://127.0.0.1:8000/update_music/

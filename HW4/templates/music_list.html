@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyMusicList</title>
+</head>
+<body>
+    <h1>MyMusicList</h1>
+        <ul>
+            {% for item in music_list %}
+                <li>{{ item.song }} - {{ item.artist }}</li>
+            {% endfor %}
+        </ul>
+</body>
+</html>
